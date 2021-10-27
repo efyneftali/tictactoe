@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Project</title>
+    <title>TicTacToe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="normalize.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<script type="app.js" defer></script>
 </head>
 <body>
-
+<h1>TicTacToe</h1>
+<div class="game" id="game">
+	<div>Player</div>
+	<div>CPU</div>
+	<form action="/notsure">
+		<label for="levels">Level:</label>
+		<select name="levels" id="levels">
+			<option value="Human">Human</option>
+			<option value="AI">AI</option>
+		</select>
+	</form>
+	<div>
+		<div class="Xs">X</div>
+		<div class="Os">O</div>
+	</div>
+	<!-- names sep by spc are two diff classes -->
+	<div class="board circle">
+		<div class="cell x" data-cell></div>
+		<div class="cell circle" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+		<div class="cell" data-cell></div>
+	</div>
+	<div class="winning-msg" id="winning-msgs">
+		<div data-winning-msg-text>X wins!</div>
+		<button id="restartButton">Restart</button>
+		<!-- x's wins  or o's wins will go here -->
+	</div>
+</div>
 </body>
 </html>
